@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hi</h1>
+    <!-- <script src="views/promises.js"></script> -->
+    <script>
+        var str="as";
+        console.log(parseInt(str,16));
+        function counter(){
+            var n=0;console.log(n++);
+            return{
+                count: function(){return n++},
+                reset: function() {return n=0}
+            };
+        }
+        var c=counter();
+        var d= counter();
+        console.log("aAAA")
+        console.log(c.count());
+        console.log(d.count());
+        console.log(c.reset());
+        console.log(c.count());
+        console.log("aaaaaaaaaaa"+d.count());
+        let matrix = [
+  [1, 2, 3,4,5],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+console.log(matrix[0].length);
+
+        counter();
+    </script>
+    <!-- <script>
+        var user = {
+            name:"Jhon",
+            surname:"Smith"
+        };
+        console.log(user.name);
+        user.name = "Pete";
+        console.log(user.name);
+        delete user.name;
+        console.log("name property in user"+ "name" in user);
+        var schedule={};
+        console.log("schedule object isEmpty? "+ isEmpty(schedule));
+        schedule.age=22;
+        console.log("schedule object isEmpty? "+ isEmpty(schedule));
+        function isEmpty(schedule){
+            for(var key in schedule){
+                return false;
+            }
+            return true;
+        }
+        let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130
+        };
+        var sum=0;
+        for(let key in salaries){
+            sum = sum + salaries[key];
+        }
+        console.log(sum);
+        let menu = {
+        width: 200,
+        height: 300,
+        title: "My menu"
+        };
+        console.log(JSON.stringify(menu));
+        multiplyNumeric(menu);
+        function multiplyNumeric(menu){
+            for(var key in menu){
+                if(typeof menu[key] === 'number'){
+                menu[key] *= 2;
+                }
+            }
+            console.log(JSON.stringify(menu));
+        }
+        user.name = "shiva";
+        sayHi = ()=>console.log("hello "+ this.name +" and ur sur name is "+ this.surname );
+        user.sayHi = sayHi;
+        user.sayHi();
+        // var calculator = {
+        // }
+        // calculator.read = function(){
+        //     calculator.x = prompt("enter the value of x: ",1);
+        //     calculator.y = prompt("enter the value of y: ",2);
+        // }
+        // calculator.sum = function(){
+        //     var a = Number(this.x)
+        //     var b = Number(this.y);
+        //     return a+b;
+        // }
+        // calculator.mul = function(){
+        //     return this.x * this.y;
+        // }
+        // calculator.read();
+        // alert( calculator.sum() );
+        // alert( calculator.mul() );
+        let ladder = {
+        step: 0,
+        up() {
+            this.step++;
+            return this;
+        },
+        down() {
+            this.step--;
+            return this;
+        },
+        showStep: function() { // shows the current step
+            alert( this.step );
+            return this;
+        }
+        };
+        ladder.up()
+                .up()
+                .down()
+                .showStep();
+    // usinf for...of and iterator to iterate a object or array or string
+        var range = {
+            from : 1,
+            to : 5
+        };
+        range[Symbol.iterator] = function(){
+
+            return {
+                current: this.from,
+                last: this.to,
+                next(){
+                    if(this.current <= this.last){
+                        return {done: false, value:this.current++}
+                    }else{
+                        return {done:true}
+                    }
+                }
+            }
+        }
+        for(let num of range){
+            console.log(num);
+        }
+        var str = "shiva";
+        var len = str.length;
+        for(let i=0;i<len-1;i++){
+            console.log(str.charAt(i));
+        }
+    // usind Maps and Set
+    // task1
+    var people = new Map();
+        people.set(1,"shiva")
+            .set(2,"thejas")
+            .set(3,"manohar");
+            for(var keys of people.keys()){
+                console.log(keys);
+            }
+            for(let val of people.values()){
+                console.log(val);
+            }
+            for(var entri of people){
+                console.log(entri);
+            }
+            people.forEach((value,key,map) => {
+                console.log(`${key}:${value}`);
+            });
+            var num1 = Number(str.charCodeAt(4));
+            console.log(num1);
+            let values = ["Hare", "Krishna", "Hare", "Krishna","Krishna", "Krishna", "Hare", "Hare", ":-O"];
+            var arr = new Set();
+            for(var val of values){
+                arr.add(val);
+            }
+            for(var dis of arr.values()){
+                console.log(dis);
+            } 
+        // task2
+            let arr1 = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];   
+            function aclean(arr){
+                var map = new Map();
+                for(var word of arr){
+                    var sorted = word.toLowerCase().split('').sort().join();
+                    map.set(sorted,word);
+                }
+                return Array.from(map.values());
+            }
+            console.log(aclean(arr1));
+        // task3:- iterable keys of map
+        var maps = new Map();
+        maps.set("name", "John");
+        var keys = Array.from(maps.keys());
+        keys.push("aaaaaaaa")
+        console.log(keys);
+
+
+    </script> -->
+</body>
+</html>
